@@ -1,0 +1,245 @@
+:root{
+  --teal:#0fa998;
+  --teal-dark:#087d73;
+  --teal-deep:#075f5a;
+  --mint:#eafaf7;
+  --mint-2:#f4fcfb;
+  --ink:#123b3a;
+  --muted:#5d7776;
+  --white:#ffffff;
+  --line:#d8ece9;
+  --shadow:0 22px 60px rgba(7,95,90,.13);
+  --radius:24px;
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(216,236,233,.85)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{width:30px;height:30px;object-fit:cover;border-radius:13px}
+.brand-copy{display:flex;flex-direction:column;line-height:1.05}
+.brand-copy strong{font-size:21px;letter-spacing:-.03em}
+.brand-copy span{font-size:10px;color:var(--teal-dark);margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:14px;color:#496665}
+.nav-links a:hover,.footer-links a:hover{color:var(--teal-dark)}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:15px;background:var(--teal);color:white;font-weight:750;box-shadow:0 12px 28px rgba(15,169,152,.23);transition:.2s ease}
+.button:hover{transform:translateY(-2px);background:var(--teal-dark)}
+.button-small{min-height:42px;padding:0 17px;font-size:13px}
+.button-outline{background:transparent;color:var(--teal-dark);border:1px solid var(--line);box-shadow:none}
+.button-outline:hover{color:white;border-color:var(--teal)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f5fffd 0%,#ffffff 58%,#e9faf7 100%);padding:86px 0 74px}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(15,169,152,.08);filter:blur(2px);right:-200px;top:-250px}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:60px;position:relative}
+.eyebrow{font-size:12px;font-weight:850;letter-spacing:.16em;color:var(--teal-dark);margin-bottom:14px}
+.hero h1{font-size:clamp(44px,5.2vw,70px);line-height:1.02;letter-spacing:-.055em;margin:0 0 22px;max-width:760px}
+.hero h1 span{display:block;color:var(--teal)}
+.hero-lead{font-size:18px;color:var(--muted);max-width:650px;margin:0}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin:30px 0 22px}
+.hero-points{display:flex;flex-wrap:wrap;gap:9px 18px;color:#4d6c6a;font-size:12px;font-weight:650}
+.hero-visual{min-height:500px;position:relative;display:grid;place-items:center}
+.glow{position:absolute;border-radius:50%;filter:blur(1px)}
+.glow-one{width:330px;height:330px;background:#d5f5ef}
+.glow-two{width:180px;height:180px;background:#b9ebe4;right:5%;bottom:12%}
+.health-orbit{position:absolute;border:1px solid rgba(15,169,152,.22);border-radius:50%}
+.orbit-one{width:430px;height:430px;transform:rotate(25deg)}
+.orbit-two{width:300px;height:300px;transform:rotate(-22deg)}
+.main-card{position:relative;z-index:3;width:min(390px,80%);padding:35px;border-radius:32px;background:rgba(255,255,255,.92);border:1px solid rgba(216,236,233,.95);box-shadow:var(--shadow);display:flex;align-items:center;gap:20px}
+.heart-mark{width:74px;height:74px;display:grid;place-items:center;border-radius:23px;background:var(--mint);color:var(--teal);font-size:43px;font-weight:500;box-shadow:inset 0 0 0 1px var(--line)}
+.main-card small{font-weight:850;letter-spacing:.16em;color:var(--teal-dark)}
+.main-card h3{font-size:28px;line-height:1.1;margin:7px 0}
+.main-card p{margin:0;color:var(--muted);font-size:13px}
+.floating-card{position:absolute;z-index:4;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:13px 16px;border-radius:17px;box-shadow:0 16px 35px rgba(7,95,90,.12)}
+.floating-card strong,.floating-card small{display:block}
+.floating-card strong{font-size:12px}.floating-card small{font-size:10px;color:var(--muted);margin-top:2px}
+.mini-icon{width:30px;height:30px;border-radius:10px;background:var(--mint);color:var(--teal);display:grid;place-items:center;font-weight:850}
+.card-doctor{top:10%;right:0}.card-appointment{bottom:12%;left:0}.card-report{bottom:2%;right:8%}
+.trust-strip{background:var(--teal-deep);color:#fff}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.trust-grid div{display:flex;gap:14px;align-items:center;padding:20px 10px}
+.trust-grid strong{font-size:12px;color:#9de8df}.trust-grid span{font-size:13px}
+.section{padding:105px 0}
+.section-soft{background:var(--mint-2);border-top:1px solid #eef8f6;border-bottom:1px solid #eef8f6}
+.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px}
+h2{font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.045em;margin:0}
+.section-copy{color:var(--muted);font-size:17px}.section-copy p{margin:0 0 17px}
+.section-heading{text-align:center;max-width:700px;margin:0 auto 48px}.section-heading p{color:var(--muted);margin:14px 0 0}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature-card{position:relative;padding:28px;background:#fff;border:1px solid var(--line);border-radius:22px;min-height:260px;transition:.2s ease}
+.feature-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.feature-number{position:absolute;right:22px;top:22px;font-size:11px;color:#8aa8a5;font-weight:800}
+.feature-icon{width:52px;height:52px;border-radius:16px;background:var(--mint);color:var(--teal-dark);display:grid;place-items:center;font-size:21px;font-weight:850;margin-bottom:25px}
+.feature-card h3{font-size:20px;margin:0 0 9px}.feature-card p{font-size:14px;color:var(--muted);margin:0}
+.steps{max-width:860px;margin:auto;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:70px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--line)}
+.step>span{color:var(--teal);font-size:13px;font-weight:900}.step h3{margin:0 0 4px;font-size:20px}.step p{margin:0;color:var(--muted)}
+.patient-doctor{background:#f8fffd}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.role-card{border-radius:28px;padding:42px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px rgba(7,95,90,.05)}
+.role-card.doctor{background:var(--teal-deep);color:#fff;border-color:var(--teal-deep)}
+.role-card.doctor .eyebrow{color:#9de8df}.role-card h2{font-size:34px;margin-bottom:25px}
+.role-card ul{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.role-card li{padding-left:27px;position:relative;color:#56716f}.doctor li{color:#d9f4f0}.role-card li:before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:900}.doctor li:before{color:#9de8df}
+.download-section{padding:82px 0}
+.download-box{background:linear-gradient(125deg,var(--teal-deep),var(--teal));color:#fff;border-radius:32px;padding:52px 58px;display:flex;align-items:center;justify-content:space-between;gap:35px;box-shadow:0 25px 55px rgba(7,95,90,.2)}
+.download-box .eyebrow{color:#a9eee6}.download-box h2{max-width:620px}.download-box p{margin:12px 0 0;color:#d8f5f1}.download-action{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:205px}
+.play-button{display:flex;align-items:center;gap:12px;background:#fff;color:var(--ink);padding:11px 18px;border-radius:15px;min-width:190px;box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.play-button small,.play-button strong{display:block;line-height:1.1}.play-button small{font-size:8px;letter-spacing:.12em}.play-button strong{font-size:16px;margin-top:3px}.play-symbol{font-size:22px;color:var(--teal)}
+.store-note{font-size:10px;color:#c6eeea;text-align:center;max-width:210px}
+.footer{border-top:1px solid var(--line);background:#fbfffe}
+.footer-top{display:flex;justify-content:space-between;align-items:center;padding:30px 0}
+.footer-brand img{width:30px;height:30px}.footer-links{display:flex;gap:22px;font-size:13px;color:#5c7472}
+.footer-bottom{border-top:1px solid var(--line);display:flex;justify-content:space-between;padding:18px 0;color:#79918f;font-size:11px}
+@media(max-width:950px){
+  .nav-links{display:none}.hero-grid,.split{grid-template-columns:1fr}.hero{padding-top:60px}.hero-visual{min-height:450px}.feature-grid{grid-template-columns:repeat(2,1fr)}.download-box{align-items:flex-start;flex-direction:column}.download-action{align-items:flex-start}.role-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .container{width:min(var(--max),calc(100% - 28px))}.nav{min-height:68px}.nav .button{display:none}.hero h1{font-size:43px}.hero-lead{font-size:16px}.hero-visual{min-height:390px}.main-card{padding:25px;width:92%}.main-card h3{font-size:23px}.heart-mark{width:60px;height:60px;font-size:35px}.floating-card{transform:scale(.88)}.card-doctor{top:2%;right:-5%}.card-appointment{bottom:9%;left:-7%}.card-report{right:-4%;bottom:0}.trust-grid{grid-template-columns:1fr}.trust-grid div{padding:14px 5px}.section{padding:78px 0}.feature-grid{grid-template-columns:1fr}.feature-card{min-height:auto}.footer-top,.footer-bottom{flex-direction:column;align-items:flex-start;gap:18px}.footer-links{flex-wrap:wrap}.download-box{padding:36px 28px}.download-box h2{font-size:34px}
+}
+/* =========================================
+   CURELEE - NATURAL HERO DOCTOR IMAGE
+   ========================================= */
+
+.doctor-hero{
+  position:relative;
+  min-height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* NO CARD / NO FRAME / NO CIRCLE */
+.doctor-hero::before{
+  display:none;
+}
+
+.doctor-photo-wrap{
+  position:relative;
+  width:100%;
+  height:520px;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+/* Main doctor image */
+.doctor-photo{
+  position:relative;
+  z-index:2;
+
+  width:560px;
+  height:520px;
+
+  object-fit:cover;
+  object-position:center top;
+
+  display:block;
+
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  outline:none;
+
+  /*
+    Removes the hard rectangular look.
+    White parts of the original stock photo
+    blend into the Curelee background.
+  */
+  mix-blend-mode:multiply;
+
+  /*
+    Soft fade around the image edges.
+    This makes it look integrated instead
+    of pasted onto the page.
+  */
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+}
+
+
+/* LARGE DESKTOP */
+@media (min-width:1100px){
+
+  .doctor-hero{
+    min-height:520px;
+  }
+
+  .doctor-photo-wrap{
+    height:530px;
+  }
+
+  .doctor-photo{
+    width:570px;
+    height:530px;
+
+    object-fit:cover;
+    object-position:center top;
+  }
+
+}
+
+
+/* TABLET */
+@media (max-width:950px){
+
+  .doctor-hero{
+    min-height:460px;
+  }
+
+  .doctor-photo-wrap{
+    height:470px;
+  }
+
+  .doctor-photo{
+    width:500px;
+    height:470px;
+
+    object-fit:cover;
+    object-position:center top;
+  }
+
+}
+
+
+/* MOBILE */
+@media (max-width:650px){
+
+  .doctor-hero{
+    min-height:390px;
+  }
+
+  .doctor-photo-wrap{
+    height:400px;
+  }
+
+  .doctor-photo{
+    width:430px;
+    height:400px;
+
+    object-fit:cover;
+    object-position:center top;
+  }
+
+}
